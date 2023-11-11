@@ -9,11 +9,10 @@ def selection_sort(arr):
         for j in range(i+1, n):
             if arr[j] < arr[minIndexValue]:
                 minIndexValue = j
-                temp = arr[i]
-                arr[i] = arr[minIndexValue]
-                arr[minIndexValue] = temp
+        temp = arr[i]
+        arr[i] = arr[minIndexValue]
+        arr[minIndexValue] = temp
     return arr
-
 
 arr = [5,4,3,2,1]
 print(selection_sort(arr))
