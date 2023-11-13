@@ -8,7 +8,6 @@ def isSorted(arr, n):
         for j in range(i+1, n):
             if arr[i] > arr[j]:
                 return False
-            
     return True
 
 # optomised solution
