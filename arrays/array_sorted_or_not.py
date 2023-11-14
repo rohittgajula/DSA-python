@@ -11,6 +11,7 @@ def isSorted(arr, n):
     return True
 
 # optomised solution
+# this is not working in coding ninga
 def sorted(arr, n):
     for i in range(1, n):
         if arr[i] < arr[i-1]:
