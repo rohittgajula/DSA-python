@@ -1,30 +1,15 @@
-arr = [0,0,0,1]
-n = len(arr)
+nums = [1,1,0,0,1,1,1]
 
-# bruteforce solution
-def solution(arr, n):
-    
-    non_zero = []
-    zero = []
-    for i in range(n):
-        if arr[i] != 0:
-            non_zero.append(arr[i])
-        if arr[i] == 0:
-            zero.append(arr[i])
-
-    return non_zero+zero
-
-# optimal soluition
-def solution1(arr, n):
-    non_zero = []
+def consective_ones(nums):
     count = 0
-    for i in arr:
-        if i != 0:
-            non_zero.append(i)
-        else:
+    maxi = 0
+    for i in range(len(nums)):
+        if nums[i] == 1:
             count += 1
-    return non_zero + [0] * count
+        else:
+            count = 0
+        maxi = max(maxi, count)
+    return maxi
 
-print(solution(arr, n))
-print(solution1(arr, n))
+print(consective_ones(nums))
 
